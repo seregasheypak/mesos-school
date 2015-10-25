@@ -1,0 +1,8 @@
+---
+- src: malk.java8-oracle
+
+- src: https://github.com/AnsibleShipyard/ansible-zookeeper
+  path: roles/
+
+- src: https://github.com/AnsibleShipyard/ansible-mesos
+  path: roles/
