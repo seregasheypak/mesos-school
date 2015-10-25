@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "mesosnode03" do |node3|
-    node3.vm.box = "ubuntu/trusty64A"
+    node3.vm.box = "ubuntu/trusty64"
     node3.vm.hostname = "mesosnode03"
     node3.vm.network  "private_network", ip: "192.168.56.12"
     config.vm.provider "virtualbox" do |vb|
