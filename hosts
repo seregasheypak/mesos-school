@@ -1,0 +1,15 @@
+#Do not fix mess with vagrant keys and Ansible working as provisioner. Useless waste of time.
+mesosnode01 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+mesosnode02 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+mesosnode03 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+
+
+[zookeeper_node]
+mesosnode01
+mesosnode02
+mesosnode03
+
+[mesos_node]
+mesosnode01
+mesosnode02
+mesosnode03

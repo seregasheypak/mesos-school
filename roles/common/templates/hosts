@@ -1,0 +1,6 @@
+127.0.0.1 localhost localhost.localdomain
+::1 localhost localhost.localdomain
+
+192.168.56.10 mesosnode01
+192.168.56.11 mesosnode02
+192.168.56.12 mesosnode03

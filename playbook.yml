@@ -1,0 +1,23 @@
+---
+- hosts: all
+  user: "{{ sudoUser }}"
+  sudo: True
+  roles:
+    - common
+  tags: common
+
+
+- hosts: zookeeper_node
+  user: "{{ sudoUser }}"
+  sudo: True
+  roles:
+    - ansible-zookeeper
+
+- hosts: mesos_node
+  user: "{{ sudoUser }}"
+  sudo: True
+  roles:
+    - { role: 'ansible-mesos',
+        zookeeper_hostnames: "{{ groups.zookeeper_node | join(':' + zookeeper_client_port + ',')  }}:{{ zookeeper_client_port  }}",
+        mesos_install_mode: "master-slave"
+      }

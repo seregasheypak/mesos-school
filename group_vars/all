@@ -1,0 +1,8 @@
+# IPv4 maximum transmission unit, 9216 is the maximum for Intel/Cisco hardware
+mtu: 9216
+
+#sudo user, vagrant is default
+sudoUser: vagrant
+
+#bump /etc/hosts on all VMs
+update_hosts: True
