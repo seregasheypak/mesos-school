@@ -54,3 +54,5 @@ default via 10.0.2.2 dev eth0
 sudo ip route change to default dev eth1 via 192.168.56.0     
 
 ```
+
+sudo route add -net 8.8.8.8 netmask 255.255.255.255 eth1

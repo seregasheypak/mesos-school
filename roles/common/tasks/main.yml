@@ -44,3 +44,7 @@
     - openjdk-7-jre-headless
     - java-1.7.0-openjdk
     - openjdk-7
+
+- name: set eth1 to default interface
+  shell: route add -net 8.8.8.8 netmask 255.255.255.255 eth1
+  when : ansible_default_ipv4.alias != "eth1"
